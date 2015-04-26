@@ -67,3 +67,6 @@ C:\Users\Intel\Documents\Visual Studio 2012\Projects\MusalaTask\MusalaTask\bin\z
 C:\Users\Intel\Documents\Visual Studio 2012\Projects\MusalaTask\MusalaTask\obj\Debug\MusalaTask.dll
 C:\Users\Intel\Documents\Visual Studio 2012\Projects\MusalaTask\MusalaTask\obj\Debug\MusalaTask.pdb
 C:\Users\Intel\Documents\Visual Studio 2012\Projects\MusalaTask\MusalaTask\bin\XMLDocument.xml
+C:\Users\Intel\Documents\Visual Studio 2012\Projects\MusalaTask\MusalaTask\bin\System.Web.Cors.dll
+C:\Users\Intel\Documents\Visual Studio 2012\Projects\MusalaTask\MusalaTask\bin\System.Web.Http.Cors.dll
+C:\Users\Intel\Documents\Visual Studio 2012\Projects\MusalaTask\MusalaTask\bin\System.Web.Http.Cors.xml

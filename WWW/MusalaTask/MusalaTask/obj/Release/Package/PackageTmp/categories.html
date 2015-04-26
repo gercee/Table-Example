@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Categories</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-table.min.css" rel="stylesheet">
+    <link href="css/jquery.fileupload.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap-table.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/categories.js"></script>
+    <script src="js/helper.js"></script>
+        
+</head>
+<body>
+
+
+    <div role="tabpanel">
+
+        <!-- Nav tabs -->
+
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav" role="tablist">
+                         <li role="presentation"><a href="index.html" role="tab" >Documents</a></li>
+                        <li role="presentation" class="active"><a href="categories.html" role="tab" >Categories</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right" role="tablist">
+                        <li role="presentation"><a href="Help" role="tab" target="_blank">Api Documentation</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
+
+        <div class="container">
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="documents">
+                    <div id="custom-toolbar">
+                        <div class="form-inline" role="form">
+
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#addCategoryModal">Add Category</button>
+                        </div>
+                    </div>
+
+                    <table id="categoriesTable"></table>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+    <div class="modal fade" id="addCategoryModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Add Category</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="categoryName" class="control-label">Category Name:</label>
+                            <input type="text" class="form-control" id="categoryName">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="btnAdd">Add Category</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            categories.init();
+        });
+    </script>
+</body>
+</html>

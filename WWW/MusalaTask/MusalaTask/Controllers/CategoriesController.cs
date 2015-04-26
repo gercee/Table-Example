@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using MusalaTask.DB;
 using MusalaTask.DB.DAO;
 using MusalaTask.Models;
@@ -13,6 +14,7 @@ namespace MusalaTask.Controllers
     /// <summary>
     /// Api Controller for Categories.
     /// </summary>
+    /// 
     public class CategoriesController : ApiController
     {
         /// <summary>
@@ -30,6 +32,7 @@ namespace MusalaTask.Controllers
         /// </summary>
         /// <param name="id">ID of the Category Object.</param>
         /// <returns>Category Object if the there is a Category Object with the specified id in the Database, else return null</returns>
+        /// 
         public Category Get(int id)
         {
             CategoryDAO categoryDao = new CategoryDAOImpl();
@@ -40,6 +43,7 @@ namespace MusalaTask.Controllers
         /// Insert Category Object in the database.
         /// </summary>
         /// <param name="value">Category Object.</param>
+        /// 
         public void Post([FromBody]Category value)
         {
             CategoryDAO categoryDao = new CategoryDAOImpl();
@@ -50,6 +54,7 @@ namespace MusalaTask.Controllers
         /// Update Category Object in the database.
         /// </summary>
         /// <param name="value">Category Object.</param>
+        /// 
         public void Put([FromBody]Category value)
         {
             CategoryDAO categoryDao = new CategoryDAOImpl();
@@ -60,6 +65,7 @@ namespace MusalaTask.Controllers
         /// Delete Category Object from the database with the sepcified ID.
         /// </summary>
         /// <param name="id">CategoryID for the Category object that will be deleted.</param>
+        /// 
         public void Delete(int id)
         {
             CategoryDAO categoryDao = new CategoryDAOImpl();

@@ -66,7 +66,7 @@ var categories = {
                 }
             },
             error: function (e) {
-                alert(e.responseJSON.ExceptionMessage);
+                categories.showError(e);
             },
             contentType: "application/json"
         });
@@ -84,10 +84,21 @@ var categories = {
             },
             error: function (e) {
                 $("#btnAdd").prop('disabled', false);
-                alert(e.responseJSON.ExceptionMessage);
+                categories.showError(e);
             },
             contentType: "application/json"
         });
+    },
+    showError: function (e) {
+        if (e.responseJSON) {
+            alert(e.responseJSON.ExceptionMessage);
+            return;
+        }
+
+        if (e.statusText) {
+            alert(e.statusText);
+            return;
+        }
     },
     addCategory: function (category) {
         $.ajax({
@@ -102,7 +113,7 @@ var categories = {
             },
             error: function (e) {
                 $("#btnAdd").prop('disabled', false);
-                alert(e.responseJSON.ExceptionMessage);
+                categories.showError(e);
             },
             contentType: "application/json"
         });
@@ -116,7 +127,7 @@ var categories = {
                 $('#categoriesTable').bootstrapTable('refresh');
             },
             error: function (e) {
-                alert(e.responseJSON.ExceptionMessage);
+                categories.showError(e);
             },
             contentType: "application/json"
         });
@@ -168,7 +179,8 @@ var categories = {
                 title: 'Action',
                 switchable: false,
                 formatter: categories.operateFormatter,
-                events: categories.operateEvents
+                events: categories.operateEvents,
+                class: 'action'
             }]
         });
     },

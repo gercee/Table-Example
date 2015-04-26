@@ -22,6 +22,8 @@ namespace MusalaTask
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             BaseDAOImpl.connectionString = WebConfigurationManager.AppSettings["DefaultConnection"];
+
+            GlobalConfiguration.Configuration.EnsureInitialized(); 
         }
     }
 }

@@ -123,6 +123,17 @@ var documents = {
             
         });
     },
+    showError: function (e) {
+        if (e.responseJSON) {
+            alert(e.responseJSON.ExceptionMessage);
+            return;
+        }
+
+        if (e.statusText) {
+            alert(e.statusText);
+            return;
+        }
+    },
     downloadURI: function (uri, name) {
         console.log(uri);
         var link = document.createElement("a");
@@ -139,7 +150,7 @@ var documents = {
                 $('#documentCategoryFilter').val(-1);
             },
             error: function (e) {
-                alert(e.responseJSON.ExceptionMessage);
+                documents.showError(e);
             },
             contentType: "application/json"
         });
@@ -159,7 +170,7 @@ var documents = {
             },
             error: function (e) {
                 $("#btnSave").prop('disabled', false);
-                alert(e.responseJSON.ExceptionMessage);
+                documents.showError(e);
             },
             contentType: "application/json"
         });
@@ -178,7 +189,7 @@ var documents = {
                 $('#documentCategoryFilter').val(-1);
             },
             error: function (e) {
-                alert(e.responseJSON.ExceptionMessage);
+                documents.showError(e);
             },
             contentType: "application/json"
         });
@@ -265,7 +276,8 @@ var documents = {
                 title: 'Action',
                 switchable: false,
                 formatter: documents.operateFormatter,
-                events: documents.operateEvents
+                events: documents.operateEvents,
+                class: 'action'
             }]
         });
     },
