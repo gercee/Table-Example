@@ -4,3 +4,5 @@ Table example
 - 2 html files index.html for documents table and categories.html for categories table.
 - bootstrap-table used for the table representation
 - jQuery
+
+Example: http://task.com.rosebloom.arvixe.com
