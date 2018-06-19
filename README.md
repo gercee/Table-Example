@@ -5,4 +5,4 @@ Table example
 - bootstrap-table used for the table representation
 - jQuery
 
-Example: http://task.com.rosebloom.arvixe.com
+Example: http://task.com.100-42-49-101.ws139.avxwin.temp.domains/
